@@ -36,11 +36,14 @@ body {
     height: 70px;
 }
 
-.bg1 {
-    float: left;
+.header {
+    padding-top: 50px;
     margin-bottom: 10px;
-    width: 100%
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
 }
+
 .imgbig {
     position: relative;
     float: left;
@@ -63,11 +66,13 @@ a:hover {
     text-decoration: underline;
     text-align: center;
 }
+
 h1 {
     font-weight: 100;
     font-size: 12px;
     letter-spacing: 1px;
 }
+
 h2 {
     font-weight: 700;
     font-size: 50px;
@@ -75,6 +80,13 @@ h2 {
     letter-spacing: 1px;
     font-family: "avenir", helvetica, arial, sans-serif;
 }
+
+h3 {
+    font-weight: 100;
+    line-height: 1.18em;
+    font-size: 40px;
+}
+
 .quotefrontpage {
     font-size: 50px;
     line-height: 1.18em
@@ -85,6 +97,7 @@ h2 {
     line-height: 1.18em;
     font-size: 30px;
 }
+
 .bold {
     font-weight: 700;
     text-align: center;
@@ -92,21 +105,15 @@ h2 {
 .list {
     text-align: center;
 }
-.collaborators {
-    font-weight: 100;
-    padding-left: 300px;
-    padding-top: 78px;
-    margin-bottom: 300px;
-    text-align: left;
-    margin-right: 50px;
-    line-height: 1.18em;
-    font-size: 40px;
-}
 
 /*
  * Responsive: Tablet and larger
 */
 @media screen and (min-width: 600px) {
+
+    h2 {
+        font-size: 87px;
+    }
 
 	#top {
 	    position: absolute;
@@ -136,11 +143,34 @@ h2 {
 	}
 
 	.quotefrontpage {
-		font-size: 87px;
 	    padding-left: 300px;
 	    padding-top: 78px;
 	    text-align: left;
 	    margin-right: 50px;
 	}
 
+    .header {
+        float: left;
+        margin-bottom: 10px;
+        margin-right: 50px;
+        /*min-height: 900px;*/
+        width: 100%;
+        padding-left: 300px;
+        padding-top: 78px;
+        text-align: left;
+    }
+
+    /* Make ONLY the first h2 that appears on the header have a super huge margin-bottom */
+    .header > h2 {
+        margin-bottom: 300px;
+    }
+
+    .header >h3 {
+        margin-bottom: 300px;
+    }
+
 }
+
+/** {
+    border: 1px solid green;
+}*/
